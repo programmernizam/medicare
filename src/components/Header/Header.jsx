@@ -26,6 +26,7 @@ const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
 
+  // ======Handle Sticky Header======
   const handleStickyHeader = () => {
     window.addEventListener("scroll", () => {
       if (
@@ -42,6 +43,10 @@ const Header = () => {
     handleStickyHeader();
     return window.removeEventListener("scroll", handleStickyHeader);
   }, []);
+  // ======Handle Toggle Menu======
+  const toggleMenu = () => {
+    menuRef.current.classList.toggle("show_menu");
+  };
   return (
     <header className="header flex items-center" ref={headerRef}>
       <div className="container">
@@ -51,7 +56,7 @@ const Header = () => {
             <img src={logo} alt="Logo" />
           </div>
           {/* ==========Menu========== */}
-          <div className="navigation">
+          <div className="navigation" onClick={toggleMenu} ref={menuRef}>
             <ul className="menu flex items-center gap-[2.7rem]">
               {navLinks.map((link, index) => (
                 <li key={index}>
@@ -87,7 +92,7 @@ const Header = () => {
                 Login
               </button>
             </Link>
-            <span className="md:hidden">
+            <span className="md:hidden" onClick={toggleMenu}>
               <BiMenu className="w-6 h-6 cursor-pointer" />
             </span>
           </div>
