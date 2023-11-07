@@ -1,29 +1,49 @@
+import { useEffect, useRef } from "react";
 import { BiMenu } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
 import userImg from "../../assets/images/avatar-icon.png";
 import logo from "../../assets/images/logo.png";
 
+const navLinks = [
+  {
+    path: "/home",
+    display: "Home",
+  },
+  {
+    path: "/doctors",
+    display: "Find a Doctor",
+  },
+  {
+    path: "/services",
+    display: "Services",
+  },
+  {
+    path: "/contact",
+    display: "Contact",
+  },
+];
 const Header = () => {
-  const navLinks = [
-    {
-      path: "/home",
-      display: "Home",
-    },
-    {
-      path: "/doctors",
-      display: "Find a Doctor",
-    },
-    {
-      path: "/services",
-      display: "Services",
-    },
-    {
-      path: "/contact",
-      display: "Contact",
-    },
-  ];
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
+
+  const handleStickyHeader = () => {
+    window.addEventListener("scroll", () => {
+      if (
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
+      ) {
+        headerRef.current.classList.add("sticky_header");
+      } else {
+        headerRef.current.classList.remove("sticky_header");
+      }
+    });
+  };
+  useEffect(() => {
+    handleStickyHeader();
+    return window.removeEventListener("scroll", handleStickyHeader);
+  }, []);
   return (
-    <header className="header flex items-center">
+    <header className="header flex items-center" ref={headerRef}>
       <div className="container">
         <div className="flex items-center justify-between">
           {/* =========Logo========= */}
@@ -51,7 +71,7 @@ const Header = () => {
           </div>
           {/* =========Nav Right========= */}
           <div className="flex items-center gap-4">
-            <div>
+            <div className="hidden">
               <Link>
                 <figure className="w-[35px] h-[35px] rounded-full cursor-auto">
                   <img
