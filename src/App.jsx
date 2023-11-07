@@ -1,6 +1,11 @@
 import "./App.css";
+import Layout from "./layout/Layout";
 const App = () => {
-  return <div className="text-red-500">welcome</div>;
+  return (
+    <div>
+      <Layout />
+    </div>
+  );
 };
 
 export default App;
