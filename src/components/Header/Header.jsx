@@ -1,5 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { BiMenu } from "react-icons/bi";
+import { Link, NavLink } from "react-router-dom";
+import userImg from "../../assets/images/avatar-icon.png";
 import logo from "../../assets/images/logo.png";
+
 const Header = () => {
   const navLinks = [
     {
@@ -37,7 +40,7 @@ const Header = () => {
                     className={(navClass) =>
                       navClass.isActive
                         ? "text-primaryColor text-[16px] leading-7 font-semibold"
-                        : "text-textColor text-[16px] leading-7 font-medium"
+                        : "text-textColor text-[16px] leading-7 font-medium hover:text-primaryColor"
                     }
                   >
                     {link.display}
@@ -45,6 +48,28 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+          </div>
+          {/* =========Nav Right========= */}
+          <div className="flex items-center gap-4">
+            <div>
+              <Link>
+                <figure className="w-[35px] h-[35px] rounded-full cursor-auto">
+                  <img
+                    src={userImg}
+                    className="w-full rounded-full"
+                    alt="User Image"
+                  />
+                </figure>
+              </Link>
+            </div>
+            <Link to="/login">
+              <button className="bg-primaryColor font-semibold py-2 px-6 text-white h-[44px] flex items-center rounded-[50px]">
+                Login
+              </button>
+            </Link>
+            <span className="md:hidden">
+              <BiMenu className="w-6 h-6 cursor-pointer" />
+            </span>
           </div>
         </div>
       </div>
