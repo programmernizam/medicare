@@ -1,3 +1,4 @@
+import AboutSection from "./AboutSection";
 import Hero from "./Hero";
 import HowItWork from "./HowItWork";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Hero />
       <HowItWork />
+      <AboutSection />
     </div>
   );
 };
