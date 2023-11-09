@@ -1,4 +1,4 @@
-import AboutSection from "./AboutSection";
+import About from "../../components/About/About";
 import Hero from "./Hero";
 import HowItWork from "./HowItWork";
 
@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <Hero />
       <HowItWork />
-      <AboutSection />
+      <About />
     </div>
   );
 };
