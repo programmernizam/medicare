@@ -1,9 +1,11 @@
 const FeatureSection = () => {
-    return (
-        <section>
-            
-        </section>
-    );
+  return (
+    <section>
+      <div className="container">
+        <div></div>
+      </div>
+    </section>
+  );
 };
 
 export default FeatureSection;
