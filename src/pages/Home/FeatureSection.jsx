@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-
+import featureImg from "../../assets/images/feature-img.png";
 const FeatureSection = () => {
   return (
     <section>
       <div className="container">
         <div className="flex items-center justify-between flex-col lg:flex-row">
-          {/* Feature Content */}
+          {/* ======Feature Content======= */}
           <div className="xl:w-[670px]">
             <h2 className="heading">
               Get virtual treatment <br /> anytime
@@ -25,6 +25,10 @@ const FeatureSection = () => {
             <Link to={"/"}>
               <button className="btn">Learn More</button>
             </Link>
+          </div>
+          {/* ======Feature Image====== */}
+          <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0">
+            <img src={featureImg} className="w-3/4" alt="" />
           </div>
         </div>
       </div>
