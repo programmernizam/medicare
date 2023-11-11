@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import avatarIcon from "../../assets/images/avatar-icon.png";
 import featureImg from "../../assets/images/feature-img.png";
+import videoIcon from "../../assets/images/video-icon.png";
 const FeatureSection = () => {
   return (
     <section>
@@ -40,8 +42,17 @@ const FeatureSection = () => {
                   </p>
                 </div>
                 <span className="w-5 h-5 lg:w-[34px] lg:h-[34px] flex items-center justify-center bg-yellowColor rounded py-1 px-[6px] lg:py-3 ;g:px-[9px]">
-                  <img src="" alt="" />
+                  <img src={videoIcon} alt="" />
                 </span>
+              </div>
+              <div className="w-[65px] lg:w-[96px] bg-[#CCF0F3] py-1 px-2 lg:py-[6px] lg:px-[10px] text-[8px] leading=[8px] lg:text-[12px] leading-4 text-irisBlueColor font-medium mt-2 lg:mt-4 rounded-full">
+                Consultation
+              </div>
+              <div className="flex items-center gap-6px lg:gap-[10px] mt-2 lg:mt-[18px]">
+                <img src={avatarIcon} alt="" />
+                <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-bold text-headingColor">
+                  John Deo
+                </h4>
               </div>
             </div>
           </div>
