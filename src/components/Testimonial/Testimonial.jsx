@@ -1,17 +1,18 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import patientAvatar from "../../assets/images/patient-avatar.png";
-// import { HiStar } from "react-icons/hi";
+import TestimonialCard from "./TestimonialCard";
 
 const Testimonial = () => {
   return (
     <div className="mt-[30px] lg:mt-[55px]">
       <Swiper
-        modules={Pagination}
+        modules={[Pagination]}
+        loop={true}
         spaceBetween={30}
         slidesPerView={1}
         pagination={{ clickable: true }}
@@ -31,16 +32,19 @@ const Testimonial = () => {
         }}
       >
         <SwiperSlide>
-          <div className="py-[30px] px-5 rounded-[13px]">
-            <div className="flex items-center gap-[13px]">
-              <img src={patientAvatar} alt="" />
-              <div>
-                <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                  Nizam Uddin
-                </h4>
-              </div>
-            </div>
-          </div>
+          <TestimonialCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestimonialCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestimonialCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestimonialCard />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestimonialCard />
         </SwiperSlide>
       </Swiper>
     </div>
