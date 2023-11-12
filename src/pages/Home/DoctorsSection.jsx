@@ -1,3 +1,5 @@
+import DoctorList from "../../components/Doctors/DoctorList";
+
 const DoctorsSection = () => {
   return (
     <section>
@@ -9,6 +11,7 @@ const DoctorsSection = () => {
             expert health care.
           </p>
         </div>
+        <DoctorList />
       </div>
     </section>
   );
