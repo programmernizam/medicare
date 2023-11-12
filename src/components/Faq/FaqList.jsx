@@ -1,5 +1,13 @@
+import faqs from "../../assets/data/faqs";
+import FaqItem from "./FaqItem";
 const FaqList = () => {
-  return <div>list</div>;
+  return (
+    <ul className="mt-[38px]">
+      {faqs.map((faq, index) => (
+        <FaqItem key={index} faq={faq} />
+      ))}
+    </ul>
+  );
 };
 
 export default FaqList;
