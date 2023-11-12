@@ -1,4 +1,5 @@
 import About from "../../components/About/About";
+import DoctorsSection from "./DoctorsSection";
 import FeatureSection from "./FeatureSection";
 import Hero from "./Hero";
 import HowItWork from "./HowItWork";
@@ -12,6 +13,7 @@ const Home = () => {
       <About />
       <ServiceSection />
       <FeatureSection />
+      <DoctorsSection />
     </div>
   );
 };
