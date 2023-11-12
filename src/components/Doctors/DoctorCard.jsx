@@ -14,9 +14,11 @@ const DoctorCard = ({ doctor }) => {
   } = doctor;
   return (
     <div className="p-3 lg:p-5">
+      {/* ===Card Image== */}
       <div>
         <img className="w-full" src={photo} alt="" />
       </div>
+      {/* ====Card Middle==== */}
       <h2 className="text-lg lg:text-[26px] lg:leading-9 font-bold text-headingColor mt-3 lg:mt-5">
         {name}
       </h2>
@@ -34,6 +36,7 @@ const DoctorCard = ({ doctor }) => {
           </span>
         </div>
       </div>
+      {/* ===Card Bottom=== */}
       <div className="mt-18px lg:mt-5 flex items-center justify-between">
         <div>
           <h3 className="text-[16px] leading-7 lg:text-[18px] lg:leading-[30px] font-semibold text-headingColor">
