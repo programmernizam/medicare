@@ -1,3 +1,5 @@
+import Testimonial from "../../components/Testimonial/Testimonial";
+
 const TestimonialSection = () => {
   return (
     <section>
@@ -9,6 +11,7 @@ const TestimonialSection = () => {
             expert health care.
           </p>
         </div>
+        <Testimonial />
       </div>
     </section>
   );
