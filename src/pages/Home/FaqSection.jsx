@@ -1,4 +1,5 @@
 import faqImage from "../../assets/images/faq-img.png";
+import FaqList from "../../components/Faq/FaqList";
 const FaqSection = () => {
   return (
     <section>
@@ -7,6 +8,7 @@ const FaqSection = () => {
           <div className="hidden w-1/2 md:block">
             <img src={faqImage} alt="" />
           </div>
+          <FaqList />
         </div>
       </div>
     </section>
