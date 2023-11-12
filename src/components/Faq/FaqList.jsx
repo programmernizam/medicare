@@ -3,8 +3,8 @@ import FaqItem from "./FaqItem";
 const FaqList = () => {
   return (
     <ul className="mt-[38px]">
-      {faqs.map((faq, index) => (
-        <FaqItem key={index} faq={faq} />
+      {faqs.map((item, index) => (
+        <FaqItem key={index} item={item} />
       ))}
     </ul>
   );
