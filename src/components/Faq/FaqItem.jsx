@@ -18,7 +18,7 @@ const FaqItem = ({ item }) => {
         <div
           className={`${
             isOpen && "bg-primaryColor text-white border-none "
-          }w-7 h-7 lg:w-8 lg:h-8 flex justify-center items-center border border-solid border-[#141F21] rounded`}
+          } w-7 h-7 lg:w-8 lg:h-8 flex justify-center items-center border border-solid border-[#141F21] rounded`}
         >
           {isOpen ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </div>
