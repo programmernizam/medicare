@@ -1,5 +1,9 @@
 const Doctors = () => {
-  return <div></div>;
+  return (
+    <section>
+      <div className="container text-center"></div>
+    </section>
+  );
 };
 
 export default Doctors;
