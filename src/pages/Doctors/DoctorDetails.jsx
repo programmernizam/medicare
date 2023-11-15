@@ -1,8 +1,8 @@
 const DoctorDetails = () => {
   return (
-    <div>
-      Doctor Details
-    </div>
+    <section>
+      <div className="max-w-[1170px] px-5 mx-auto"></div>
+    </section>
   );
 };
 
