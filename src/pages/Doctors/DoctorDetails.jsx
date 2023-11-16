@@ -1,4 +1,5 @@
 import doctorImg from "../../assets/images/doctor-img02.png";
+import starIcon from "../../assets/images/Star.png";
 const DoctorDetails = () => {
   return (
     <section>
@@ -13,6 +14,21 @@ const DoctorDetails = () => {
                 <span className="bg-[#CCF0F3] text-irisBlueColor py-1 px-6 lg:py-2 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">
                   Surgeon
                 </span>
+                <h3 className="text-headingColor text-[22px] leading-9 mt-3 font-bold">
+                  MD Nizam Uddin
+                </h3>
+                <div className="flex items-center gap-[6px]">
+                  <span className="flex items-center gap-[6px] text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
+                    <img src={starIcon} alt="" /> 4.8
+                  </span>
+                  <span className="text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-normal text-textColor">
+                    (272)
+                  </span>
+                </div>
+                <p className="text_para text-[14px] leading-5 md:text-[15px] lg:max-w-[390px]">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Nesciunt, dolore!
+                </p>
               </div>
             </div>
           </div>
