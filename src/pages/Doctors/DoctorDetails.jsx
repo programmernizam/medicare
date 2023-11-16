@@ -1,6 +1,8 @@
 import { useState } from "react";
 import starIcon from "../../assets/images/Star.png";
 import doctorImg from "../../assets/images/doctor-img02.png";
+import DoctorAbout from "./DoctorAbout";
+import DoctorFeedback from "./DoctorFeedback";
 const DoctorDetails = () => {
   const [tab, setTab] = useState("about");
   return (
@@ -55,7 +57,10 @@ const DoctorDetails = () => {
               </button>
             </div>
             {/* Details Content */}
-            <div></div>
+            <div className="mt-[50px]">
+              {tab === "about" && <DoctorAbout />}
+              {tab === "feedback" && <DoctorFeedback />}
+            </div>
           </div>
         </div>
       </div>
