@@ -1,3 +1,5 @@
+import formateDate from "../../utils/formateDate";
+
 const DoctorAbout = () => {
   return (
     <div>
@@ -25,7 +27,7 @@ const DoctorAbout = () => {
           <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px]">
             <div>
               <span className="text-irisBlueColor text-[15px] leading-6 font-semibold">
-                23 June, 2008
+                {formateDate("09-13-2014")} - {formateDate("09-13-2016")}
               </span>
               <p className="text-[16px] leading-6 font-medium text-textColor">
                 PHD in Surgeon
@@ -38,7 +40,7 @@ const DoctorAbout = () => {
           <li className="flex flex-col sm:flex-row sm:justify-between sm:items-end md:gap-5 mb-[30px]">
             <div>
               <span className="text-irisBlueColor text-[15px] leading-6 font-semibold">
-                23 June, 2008
+                {formateDate("07-04-2010")} - {formateDate("07-04-2014")}
               </span>
               <p className="text-[16px] leading-6 font-medium text-textColor">
                 PHD in Surgeon
