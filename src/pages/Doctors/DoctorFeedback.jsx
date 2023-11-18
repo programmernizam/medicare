@@ -1,3 +1,4 @@
+import { AiFillStar } from "react-icons/ai";
 import avatarImg from "../../assets/images/avatar-icon.png";
 import formateDate from "../../utils/formateDate";
 const DoctorFeedback = () => {
@@ -23,6 +24,11 @@ const DoctorFeedback = () => {
                 Good Service, Highly Recommended!
               </p>
             </div>
+          </div>
+          <div className="flex gap-1">
+            {[...Array(5).keys()].map((_, index) => (
+              <AiFillStar key={index} color="#0067FF" />
+            ))}
           </div>
         </div>
       </div>
