@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import avatarImg from "../../assets/images/avatar-icon.png";
 import formateDate from "../../utils/formateDate";
+import FeedbackForm from "./FeedbackForm";
 const DoctorFeedback = () => {
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   return (
     <div>
       <div className="mb-[50px]">
@@ -32,6 +35,14 @@ const DoctorFeedback = () => {
           </div>
         </div>
       </div>
+      {!showFeedbackForm && (
+        <div className="text-center">
+          <button className="btn" onClick={() => setShowFeedbackForm(true)}>
+            Give Feedback
+          </button>
+        </div>
+      )}
+      {showFeedbackForm && <FeedbackForm />}
     </div>
   );
 };
