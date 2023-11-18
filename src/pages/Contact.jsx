@@ -30,6 +30,21 @@ const Contact = () => {
               className="form_input mt-1"
             />
           </div>
+          <div className="sm:col-span-2">
+            <label htmlFor="message" className="form_label">
+              Your Message
+            </label>
+            <textarea
+              rows="6"
+              type="text"
+              id="message"
+              placeholder="Leave a comment..."
+              className="form_input mt-1"
+            />
+          </div>
+          <button className="btn sm:w-fit rounded" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </section>
