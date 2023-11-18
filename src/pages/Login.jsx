@@ -35,6 +35,14 @@ const Login = () => {
               className="w-full px-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor:pointer"
             />
           </div>
+          <div className="mt-7">
+            <button
+              type="submit"
+              className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
+            >
+              Login
+            </button>
+          </div>
         </form>
       </div>
     </section>
