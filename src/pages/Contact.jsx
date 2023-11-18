@@ -8,10 +8,28 @@ const Contact = () => {
           know.
         </p>
         <form action="">
-          <label htmlFor="email" className="form_label">
-            Your Email
-          </label>
-          <input type="email" id="email" placeholder="example@gmail.com" className="form_input mt-1" />
+          <div>
+            <label htmlFor="email" className="form_label">
+              Your Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              placeholder="example@gmail.com"
+              className="form_input mt-1"
+            />
+          </div>
+          <div>
+            <label htmlFor="subject" className="form_label">
+              Subject
+            </label>
+            <input
+              type="subject"
+              id="subject"
+              placeholder="Let us know how can we help you"
+              className="form_input mt-1"
+            />
+          </div>
         </form>
       </div>
     </section>
