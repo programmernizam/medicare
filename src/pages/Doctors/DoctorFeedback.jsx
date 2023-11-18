@@ -1,4 +1,5 @@
 import avatarImg from "../../assets/images/avatar-icon.png";
+import formateDate from "../../utils/formateDate";
 const DoctorFeedback = () => {
   return (
     <div>
@@ -15,6 +16,12 @@ const DoctorFeedback = () => {
               <h5 className="text-[16px] leading-6 text-primaryColor font-bold">
                 Rasel Mia
               </h5>
+              <p className="text-[14px] leading-6 text-textColor">
+                {formateDate("02-14-2023")}
+              </p>
+              <p className="text_para mt-3 font-medium text-[15px]">
+                Good Service, Highly Recommended!
+              </p>
             </div>
           </div>
         </div>
