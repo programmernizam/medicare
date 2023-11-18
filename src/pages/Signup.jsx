@@ -1,5 +1,11 @@
 const SignUp = () => {
-  return <div>Sign Up</div>;
+  return (
+    <section className="px-5 lg:px-0">
+      <div className="max-w-[1170px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2"></div>
+      </div>
+    </section>
+  );
 };
 
 export default SignUp;
