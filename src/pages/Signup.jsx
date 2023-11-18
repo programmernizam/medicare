@@ -14,6 +14,68 @@ const SignUp = () => {
           <div className="rounded-l-lg lg:pl-16 py-10">
             <h3 className="mb-10 text-[22px] leading-9 font-bold text-headingColor">
               Create an <span className="text-primaryColor">account</span>
+              <form action="">
+                <div className="mb-5">
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    name="email"
+                    value=""
+                    className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
+                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor:pointer"
+                  />
+                </div>
+                <div className="mb-5">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    name="email"
+                    value=""
+                    className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
+                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor:pointer"
+                  />
+                </div>
+                <div className="mb-5">
+                  <input
+                    type="password"
+                    placeholder="Enter your password"
+                    name="email"
+                    value=""
+                    className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
+                  focus:border-b-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor:pointer"
+                  />
+                </div>
+                <div className="mb-5 flex items-center justify-between">
+                  <label
+                    htmlFor=""
+                    className="text-headingColor font-bold text-[16px] leading-7"
+                  >
+                    Are you a:
+                    <select
+                      name="role"
+                      className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+                    >
+                      <option value="patient">Patient</option>
+                      <option value="doctor">Doctor</option>
+                    </select>
+                  </label>
+                  <label
+                    htmlFor=""
+                    className="text-headingColor font-bold text-[16px] leading-7"
+                  >
+                    Gender:
+                    <select
+                      name="role"
+                      className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+                    >
+                      <option value="">Select</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </label>
+                </div>
+              </form>
             </h3>
           </div>
         </div>
