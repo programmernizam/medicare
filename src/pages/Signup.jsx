@@ -1,7 +1,7 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { HashLoader } from "react-spinners";
-import { toast } from "react-toastify";
 import signUpImg from "../assets/images/signup.gif";
 import { BASE_URL } from "../config";
 import uploadImageToCloudinary from "../utils/uploadColudinary";
@@ -48,11 +48,9 @@ const SignUp = () => {
       toast.success(message);
       navigate("/login");
     } catch (error) {
-      console.error("Error During Registration", error);
       toast.error(error.message);
       setLoading(false);
     }
-    console.log(formData);
   };
   return (
     <section className="px-5 lg:px-0">
