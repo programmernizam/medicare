@@ -72,7 +72,7 @@ const SignUp = () => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  name="email"
+                  name="name"
                   value={formData.name}
                   onChange={handleInputChange}
                   className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
@@ -94,7 +94,7 @@ const SignUp = () => {
                 <input
                   type="password"
                   placeholder="Enter your password"
-                  name="email"
+                  name="password"
                   value={formData.password}
                   onChange={handleInputChange}
                   className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
@@ -150,7 +150,7 @@ const SignUp = () => {
                     type="file"
                     name="photo"
                     id="customFile"
-                    accept=".jpg, .png"
+                    accept=".jpg, .png, .jpeg"
                     onChange={handleFileInputChange}
                     className="top-0 absolute left-0 w-full h-full opacity-0 cursor-pointer"
                   />
