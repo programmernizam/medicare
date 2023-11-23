@@ -34,9 +34,9 @@ const SignUp = () => {
     setLoading(true);
     try {
       const res = await fetch(`${BASE_URL}/auth/register`, {
-        method: "POST",
+        method: "post",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -48,9 +48,11 @@ const SignUp = () => {
       toast.success(message);
       navigate("/login");
     } catch (error) {
+      console.error("Error During Registration", error);
       toast.error(error.message);
       setLoading(false);
     }
+    console.log(formData);
   };
   return (
     <section className="px-5 lg:px-0">
@@ -129,8 +131,8 @@ const SignUp = () => {
                     className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
                   >
                     <option value="">Select</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                     <option value="other">Other</option>
                   </select>
                 </label>
