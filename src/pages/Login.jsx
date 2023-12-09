@@ -1,13 +1,40 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
+import { BASE_URL } from "../config";
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    try {
+      const res = await fetch(`${BASE_URL}/auth/login`, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const { message } = await res.json();
+      if (!res.ok) {
+        throw new Error(message);
+      }
+      setLoading(false);
+      toast.success(message);
+      navigate("/login");
+    } catch (error) {
+      toast.error(error.message);
+      setLoading(false);
+    }
   };
   return (
     <section className="px-5 lg:px-0">
@@ -15,7 +42,7 @@ const Login = () => {
         <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-10">
           Hello! <span className="text-primaryColor">Welcome</span> Back
         </h3>
-        <form action="" className="py-4 md:py-0">
+        <form action="" className="py-4 md:py-0" onSubmit={submitHandler}>
           <div className="mb-5">
             <input
               type="email"
