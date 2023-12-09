@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../config";
+import { authContext } from "../context/AuthContext";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Login = () => {
     password: "",
   });
   const [loading, setLoading] = useState(false);
+  const { dispatch } = useContext(authContext);
   const navigate = useNavigate();
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,13 +26,22 @@ const Login = () => {
         },
         body: JSON.stringify(formData),
       });
-      const { message } = await res.json();
+      const result = await res.json();
       if (!res.ok) {
-        throw new Error(message);
+        throw new Error(result.message);
       }
+      dispatch({
+        type: "LOGIN_SUCCESS",
+        payload: {
+          user: result.data,
+          token: result.token,
+          role: result.role,
+        },
+      });
+      console.log(result, "Login Data");
       setLoading(false);
-      toast.success(message);
-      navigate("/login");
+      toast.success(result.message);
+      navigate("/home");
     } catch (error) {
       toast.error(error.message);
       setLoading(false);
