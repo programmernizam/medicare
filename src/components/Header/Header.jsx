@@ -55,7 +55,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* =========Logo========= */}
           <div>
-            <img src={logo} alt="Logo" />
+            <Link to={"/"}>
+              <img src={logo} alt="Logo" />
+            </Link>
           </div>
           {/* ==========Menu========== */}
           <div className="navigation" onClick={toggleMenu} ref={menuRef}>
