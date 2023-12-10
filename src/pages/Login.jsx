@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import { HashLoader } from "react-spinners";
 import { BASE_URL } from "../config";
 import { authContext } from "../context/AuthContext";
 
@@ -78,10 +79,11 @@ const Login = () => {
           </div>
           <div className="mt-7">
             <button
+              disabled={loading && true}
               type="submit"
               className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
             >
-              Login
+              {loading ? <HashLoader size={35} color="#ffffff" /> : "Login"}
             </button>
           </div>
           <p className="mt-5 text-textColor text-center">

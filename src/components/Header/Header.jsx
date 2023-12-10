@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { BiMenu } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
 import userImg from "../../assets/images/avatar-icon.png";
 import logo from "../../assets/images/logo.png";
+import { authContext } from "../../context/AuthContext";
 
 const navLinks = [
   {
@@ -25,6 +26,7 @@ const navLinks = [
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
+  const { user, role, token } = useContext(authContext);
 
   // ======Handle Sticky Header======
   const handleStickyHeader = () => {
@@ -87,6 +89,7 @@ const Header = () => {
                 </figure>
               </Link>
             </div>
+            <h1>{user?.name}</h1>
             <Link to="/login">
               <button className="bg-primaryColor font-semibold py-2 px-6 text-white h-[44px] flex items-center rounded-[50px]">
                 Login
