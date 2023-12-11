@@ -1,3 +1,5 @@
+import Dashboard from "../Dashboard/doctor_account/Dashboard";
+import MyAccount from "../Dashboard/user_account/MyAccount";
 import Contact from "../pages/Contact";
 import DoctorDetails from "../pages/Doctors/DoctorDetails";
 import Doctors from "../pages/Doctors/Doctors";
@@ -19,6 +21,8 @@ const Routers = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/doctor-details" element={<DoctorDetails />} />
+        <Route path="/user/profile/me" element={<MyAccount />} />
+        <Route path="/doctors/profile/me" element={<Dashboard />} />
       </Routes>
     </div>
   );
