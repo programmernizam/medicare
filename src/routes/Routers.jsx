@@ -9,6 +9,7 @@ import Service from "../pages/Services";
 import Signup from "../pages/Signup";
 
 import { Route, Routes } from "react-router-dom";
+import ProtectedRoute from "./ProtectedRoute";
 const Routers = () => {
   return (
     <div>
@@ -21,8 +22,22 @@ const Routers = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/doctor-details" element={<DoctorDetails />} />
-        <Route path="/user/profile/me" element={<MyAccount />} />
-        <Route path="/doctors/profile/me" element={<Dashboard />} />
+        <Route
+          path="/user/profile/me"
+          element={
+            <ProtectedRoute>
+              <MyAccount />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/doctors/profile/me"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </div>
   );
