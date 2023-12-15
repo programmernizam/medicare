@@ -1,5 +1,7 @@
 import { useContext, useState } from "react";
 import userImg from "../../assets/images/doctor-img01.png";
+import Error from "../../components/Error/Error";
+import Loading from "../../components/Loader/Loading";
 import { BASE_URL } from "../../config";
 import { authContext } from "../../context/AuthContext";
 import useFetchData from "../../hooks/useFetchData";
@@ -24,7 +26,9 @@ const MyAccount = () => {
     <section>
       <div className="max-w-[1170px] px-5 mx-auto'">
         {/* Loading State */}
-        {loading && }
+        {loading && !error && <Loading />}
+        {/* Error */}
+        {error && !loading && <Error errorMessage={error} />}
         {/* Data Loaded */}
         {!loading && !error && (
           <div className="grid md:grid-cols-3 gap-10">
