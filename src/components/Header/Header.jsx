@@ -85,7 +85,7 @@ const Header = () => {
                   to={`${
                     role === "doctor"
                       ? "/doctor/profile/me"
-                      : "/users/profile/me"
+                      : "/user/profile/me"
                   }`}
                 >
                   <figure className="w-[35px] h-[35px] rounded-full cursor-auto">
