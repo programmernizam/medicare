@@ -1,3 +1,4 @@
+import DoctorCard from "../../components/Doctors/DoctorCard";
 import Error from "../../components/Error/Error";
 import Loading from "../../components/Loader/Loading";
 import { BASE_URL } from "../../config";
@@ -8,7 +9,7 @@ const MyBookings = () => {
     data: appointments,
     loading,
     error,
-  } = useFetchData(`${BASE_URL}/appointment/my-appointment`);
+  } = useFetchData(`${BASE_URL}/user/appointment/my-appointment`);
   return (
     <div>
       {/* Loading State */}
@@ -17,7 +18,16 @@ const MyBookings = () => {
       {error && !loading && <Error errorMessage={error} />}
       {/* Data Loaded */}
       {!loading && !error && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5"></div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          {appointments.map((doctor) => (
+            <DoctorCard doctor={doctor} key={doctor._id} />
+          ))}
+        </div>
+      )}
+      {!loading && !error && appointments.length === 0 && (
+        <h2 className="mt-5 text-center leading-7 text-[20px] font-semibold text-primaryColor">
+          You did not book any doctor yer!
+        </h2>
       )}
     </div>
   );
