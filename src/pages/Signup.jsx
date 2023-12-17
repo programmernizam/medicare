@@ -73,6 +73,7 @@ const SignUp = () => {
                   type="text"
                   placeholder="Full Name"
                   name="name"
+                  required
                   value={formData.name}
                   onChange={handleInputChange}
                   className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
@@ -84,6 +85,7 @@ const SignUp = () => {
                   type="email"
                   placeholder="Enter your email"
                   name="email"
+                  required
                   value={formData.email}
                   onChange={handleInputChange}
                   className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
@@ -95,6 +97,7 @@ const SignUp = () => {
                   type="password"
                   placeholder="Enter your password"
                   name="password"
+                  required
                   value={formData.password}
                   onChange={handleInputChange}
                   className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none
@@ -141,7 +144,7 @@ const SignUp = () => {
                     <img
                       src={previewURL}
                       alt=""
-                      className="w-full rounded-full"
+                      className="w-full h-full rounded-full"
                     />
                   </figure>
                 )}

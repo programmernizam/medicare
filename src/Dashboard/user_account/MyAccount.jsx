@@ -90,7 +90,7 @@ const MyAccount = () => {
                 </button>
               </div>
               {tab === "booking" && <MyBookings />}
-              {tab === "settings" && <ProfileSettings />}
+              {tab === "settings" && <ProfileSettings user={userData} />}
             </div>
           </div>
         )}
