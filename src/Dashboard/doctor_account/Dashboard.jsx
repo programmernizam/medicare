@@ -6,7 +6,7 @@ import Tabs from "./Tabs";
 
 const Dashboard = () => {
   const { data, loading, error } = useGetProfile(
-    `{BASE_URL}/doctors/profile/me`
+    `{BASE_URL}/doctor/profile/me`
   );
   const [tab, setTab] = useState("overview");
   return (
